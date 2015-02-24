@@ -1,0 +1,690 @@
+@import "../fonts/kraft/stylesheet.css";
+@import "../fonts/rosbank/stylesheet.css";
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display: block;
+}
+nav ul, 
+ul li {
+    list-style: none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    
+}
+img {
+    display: inline-block; 
+    max-width: 100%;
+}
+a img {
+    border: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+input, select {
+    vertical-align:middle;
+}
+
+html {
+-webkit-text-size-adjust: none;
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+   
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* ==========================================================================
+   CROSSSITES CLASS
+   ========================================================================== */
+
+.g-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.g-clearfix {
+    display: inline-block;
+}
+
+* html .g-clearfix {
+    height: 1%;
+}
+
+.g-clearfix {
+    display: block;
+}
+
+
+/* ==========================================================================
+   STYLES FOR TEXT
+   ========================================================================== */
+
+/* TITLE */
+
+.b-title {
+    font-family: 'RosbankSansTTLight';
+    font-weight: bold;
+}
+
+
+/* TEXT */
+
+.g-al-c {
+    text-align: center;
+}
+
+.g-al-l {
+    text-align: left;
+}
+
+.g-c-red {
+    color: #C00;
+}
+
+.g-c-light-red {
+    color: #ff0000;
+}
+
+.g-c-gray {
+    color: #8e8e8e;
+}
+
+.g-c-blue {
+    color: #00aeef;
+}
+
+.g-c-white {
+    color: #fff;
+}
+
+.g-bold {
+    font-weight: bold;
+}
+
+.g-txt {
+    font: 16pt/1.4 'RosbankSansTTLight';
+    margin: 1em 0;
+}
+
+.g-fs-22 {
+    font-size: 22pt;
+}
+
+.g-underline {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   STYLES FOR BOXES
+   ========================================================================== */
+
+.g-box {
+    margin-bottom: 46px;
+    position: relative;
+}
+
+.g-box.g-box_greeb-bg {
+    background: #d7ffba;
+    min-height: 170px;
+}
+
+.g-box.g-box_gray-bg {
+    background: #808285;
+}
+
+.g-box.g-box_white-bg {
+    background: #fff;
+}
+
+/*round corner*/
+
+.g-box.g-box_roundcrn {
+    border: 1px dashed #5DC7F2;
+    border-radius: 30px;
+    display: inline-block;
+    font: 18pt/1.4 'RosbankSansTTLight';
+    margin: 20px 0 70px;
+    padding: 20px;
+}
+
+.g-box.g-box_dashed-blue {
+    border: 1px dashed #5DC7F2;
+    color: #00aeef;
+    text-decoration: underline;
+}
+
+.g-box.g-box_roundcrn-white {
+    background: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font: 15pt/1.4 'RosbankSansTTLight';
+    margin: 20px 0 70px;
+    padding: 14px;
+    width: 100%;
+}
+
+.g-box.g-box_roundcrn-brd {
+    border: 1px dashed #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font: 17pt/1.4 'RosbankSansTTLight';
+    margin: 20px 0 70px;
+    padding: 20px 14px;
+    width: 100%;
+}
+
+.g-box.g-box_dashed-brd {
+    border: 1px dashed #414042;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 20px 0 70px;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+   
+.b-btn {
+    border-top: 1px dashed #535353;
+    color: #000;
+    display: block;
+    font: 24pt/1.4 'RosbankSansTTLight';
+    padding: 10px;
+    text-align: center;
+}   
+
+.b-btn.b-btn_blue-bg {
+    background: #8cd4f9;
+} 
+
+.b-btn.b-btn_white-bg {
+    background: #fff;
+} 
+
+.b-btn.b-btn_orange-bg {
+    background: #ffa22e;
+}
+
+.b-btn.b-btn_gray-bg {
+    background: url(/img/bg/white_pattern.png) repeat;
+}
+
+.b-btn.b-btn_darkgray-bg {
+    background: #77797c;
+}
+
+/* ==========================================================================
+   STYLES FOR LINK SCROLL TO TOP
+   ========================================================================== */
+
+.b-scroll-top {
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font: 16px/20px 'RosbankSansTTLight';
+    height: 24px;
+    left: 50%;
+    margin: -30px 0 0 -70px;
+    opacity: 0;
+    padding: 3px;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity .1s linear;
+    top: 100%;
+    width: 140px;
+    z-index: 9;
+}  
+
+.b-scroll-top:visited,
+.b-scroll-top:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+} 
+
+.b-scroll-top:hover{
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    text-decoration: none;
+} 
+ 
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+      
+.b-table {
+    color: #000;
+    margin-bottom: 34px;
+}
+
+.b-table  .b-table__th_big{
+    border-bottom: 3px solid #000;
+    font: 800 30px/30px 'RosbankSansTTLight';
+    padding: 20px 0 10px;
+    vertical-align: middle;
+}
+
+.b-table  .b-table__th{
+    border-bottom: 3px solid #000;
+    font: normal 24px/30px 'RosbankSansTTLight';
+    padding: 20px 0 10px;
+    vertical-align: middle;
+}
+
+.b-table  .b-table__td {
+    border-bottom: 1px solid #ccc;
+    font: normal 22px/30px 'RosbankSansTTLight';
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+   MODULES
+   ========================================================================== */
+
+.b-action {
+    font: 18pt/1.4 'RosbankSansTTLight';
+    margin: 64px 0 20px;
+    max-width: 1015px;
+    position: relative;
+}
+
+.b-action__txt {
+    margin-bottom: 28px;
+}  
+
+.b-action__link {
+    display: block;
+    text-align: right;
+}  
+   
+/* WRAP */
+   
+.l-wrap {
+    background: #f0f0f0;
+    min-height: 100%;
+    position: relative;
+}
+
+/* HEAD */
+
+
+.b-head {
+    background: #071228;
+    max-height: 400px;
+    position: relative;
+}
+
+.b-head__logo {
+    display: block;
+    left: 12.8%;
+    position: absolute;
+    top: 7.4%;
+    width: 62.22%;
+}
+
+.b-head__bg,
+.b-head__logo__img {
+    display: block;
+    width: 100%;
+}
+
+.b-head__promo {
+    bottom: -1.8%;
+    display: block;
+    left: 50%;
+    margin-left: -17%;
+    position: absolute;
+    width: 34%;
+}
+
+
+/* NAV */
+
+.b-nav {
+    background: url(/img/bg/top_menu_background.gif) repeat;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 0 15px 0 #000;
+    margin-bottom: 0;
+}
+
+.b-nav .b-nav__wrap {
+    margin: 0 auto;
+}
+
+.navbar-default .navbar-nav > li  {
+    position: relative;
+}
+
+.navbar-default .navbar-nav > li > a  {
+    font-family: 'Kraft';
+    border-bottom: 2px dotted transparent;
+    padding-left: 0;
+    padding-right: 0;
+    transition: border-color .2s linear;
+}
+
+.navbar-default .navbar-nav > li:after  {
+    background: url(/img/bg/top_menu_devide.gif) no-repeat 0 0;
+    content: '';
+    display: block;
+    height: 70px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+}
+
+.navbar-default .navbar-nav > li:last-child:after  {
+    display: none !important;
+}
+
+.navbar-default .navbar-nav > li:first-child a {
+    color: #ffff00;
+}
+
+.navbar-default .navbar-nav > li:nth-child(2) a {
+    color: #00ceff;
+}
+
+.navbar-default .navbar-nav > li:nth-child(3) a {
+    color: #00a51b;
+}
+
+.navbar-default .navbar-nav > li:nth-child(4) a {
+    color: #ff0223;
+}
+
+/* CONTENT */
+
+
+/*about*/
+
+.b-about {
+    background: #fff;
+    color: #222;
+    font-family: 'RosbankSansTTLight';
+}
+
+.b-about .container {
+    max-width: 1000px;
+    padding-bottom: 60px;
+}
+
+.b-about__img {
+    max-width: 346px;
+}
+
+.b-about__link {
+    color: #00aeef;
+    text-decoration: underline;
+}
+
+/*sales*/
+
+.b-sales .container {
+    max-width: 1020px;
+    padding-bottom: 10px;
+}
+
+.b-sales {
+    background: #08b0f0 url(/img/bg/blue_background.gif) repeat-x 0 0;
+    font-family: 'RosbankSansTTLight';
+}
+
+.b-sales__title {
+    margin: 7% auto 4%;
+    width: 96%;
+}
+
+.b-sales__item {
+    min-height: 440px;
+}
+
+.b-sales__item__title {
+    color: #006f99;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0.23em 0;
+}
+
+.b-sales__txt__link {
+    text-decoration: underline;
+}
+
+
+/*electric works*/
+
+.b-electric-works {
+    background: #fff;
+}
+
+.b-electric-works .container {
+    font-family: 'RosbankSansTTLight';
+    max-width: 1000px;
+}
+
+/*community services*/
+
+.b-community-services {
+    background: #ffa22e url(/img/bg/orange_background.gif) repeat-x 0 0;
+}
+
+.b-community-services .container {
+    font-family: 'RosbankSansTTLight';
+    max-width: 1000px;
+}
+
+.b-community-services .b-table__td {
+    border-color: #c76f00;
+}
+
+.b-community-services .b-action__img {
+    top: -22px;
+}
+
+/*climate*/
+
+.b-climate {
+    background: url(/img/bg/white_pattern.png) repeat;
+}
+
+.b-climate .container {
+    font-family: 'RosbankSansTTLight';
+    max-width: 1000px;
+}
+
+.b-climate .b-table__td {
+    border-bottom: 1px solid #757474;
+}
+
+.b-climate .b-action__img {
+    top: -26px;
+}
+
+/*security systems*/
+
+.b-security-systems {
+    background: #414042 url(/img/bg/grey_background.gif) repeat-x;
+}
+
+.b-security-systems .container {
+    font-family: 'RosbankSansTTLight';
+    max-width: 1000px;
+}
+
+.b-security-systems .container .g-txt {
+    color: #b10000;
+    font-size: 18pt;
+}
+
+.b-security-systems .b-title {
+    font-size: 2em;
+    margin: 1.4em 0 0.67em;
+    color: #d80303;
+}
+
+.b-security-systems .b-table__td {
+    border-bottom: 1px solid #757474;
+}
+
+.b-security-systems .g-box_gray-bg a {
+    color: #3e3e3e;
+    text-decoration: underline;
+}
+
+.b-security-systems .b-action__img {
+    top: -26px;
+}
+
+
+/* FOOTER */
+
+/*contacts*/
+
+.l-foot {
+    background: #101010 url(/img/bg/footer_background.png) repeat-x;
+}
+
+.l-foot .container {
+    font-family: 'RosbankSansTTLight';
+    max-width: 1000px;
+}
+
+.b-contacts {
+    padding-bottom: 40px;
+}
+
+.b-contacts__title {
+    color: #535353;
+    font-size: 24pt;
+    margin: 30px 0 20px;
+}
+
+.b-contacts__item {
+    border: 1px dashed #535353;
+    box-sizing: border-box;
+    color: #535353;
+    display: inline-block;
+    margin-right: 14px;
+    padding: 10px;
+}
+
+.b-contacts__item__img {
+    float: left;
+    margin-right: 10px;
+}
+
+.b-contacts__item__name {
+    display: block;
+    font-size: 15pt;
+    padding-bottom: 4px;
+}
+
+.b-contacts__item__descr {
+    display: block;
+    font-size: 11pt;
+    line-height: 1.4;
+    padding-bottom: 8px;
+}
+
+.b-contacts__item__link {
+    color: #535353;
+    display: block;
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+.desktop .g-desk-hide {
+    display: none;
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+.mobile .l-content,
+.ios .l-content {
+    padding-top: 0;
+}
+
+.mobile .b-nav,
+.tablet .b-nav,
+.ipad .b-nav {
+    display: none;
+}
+   
+.mobile .g-m-hide,
+.ios .g-m-hide {
+    display: none;
+}
+
+.mobile .g-show,
+.ios .g-show {
+    display: block;
+}
+
+.mobile .g-desk-hide,
+.ios .g-desk-hide  {
+    display: block;
+}
